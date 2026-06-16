@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>História da Programação</title>
+    <meta name="description" content="Explore a história fascinante da programação: desde o tear de Jacquard até JavaScript." />
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <span class="mobile-title">Hist. da Programação</span>
+        <div class="mobile-actions">
+            <button class="tab-btn" data-tab="inicio" aria-label="Ir para início">Início</button>
+            <button class="tab-btn" data-tab="quiz" aria-label="Ir para quiz">Quiz</button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Mobile Dropdown Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="#" data-tab="inicio" class="mobile-menu-item">Início</a>
+        <a href="#" data-tab="topico1" class="mobile-menu-item">Os Primórdios</a>
+        <a href="#" data-tab="topico2" class="mobile-menu-item">Ada & Babbage</a>
+        <a href="#" data-tab="topico3" class="mobile-menu-item">Década de 40</a>
+        <a href="#" data-tab="topico4" class="mobile-menu-item">Linguagem C</a>
+        <a href="#" data-tab="topico5" class="mobile-menu-item">JavaScript & Impacto</a>
+        <a href="#" data-tab="quiz" class="mobile-menu-item">Quiz</a>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="layout">
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- All Tabs Content -->
+                <div id="tab-inicio" class="tab-content active">
+                    <div class="py-10">
+                        <div class="section-subtitle">Bem-vindo</div>
+                        <h1 class="section-title">História da Programação</h1>
+
+                        <div class="info-card">
+                            <h3 class="card-title">Introdução</h3>
+                            <p class="paragraph">
+                                A programação foi criada para facilitar e automatizar processos, e faz parte da humanidade por muito mais tempo do que a maioria imagina. Quando pensamos em programação, a mente vai imediatamente a computadores e linhas de código — mas essa história começou muito antes das telas e dos teclados.
+                            </p>
+                            <p class="paragraph">
+                                De cartões perfurados em teares do século XIX aos algoritmos que movem bilhões de pessoas nas redes sociais hoje, a programação evoluiu de forma extraordinária. Este trabalho explora essa trajetória: os pioneiros que inventaram conceitos fundamentais, as linguagens que moldaram o mundo digital e o impacto profundo que tudo isso tem sobre a sociedade contemporânea.
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 class="card-title">Por que este tema?</h3>
+                            <p class="paragraph">
+                                Escolhemos estudar a história da programação porque ela revela algo surpreendente: a lógica computacional surgiu décadas antes dos computadores elétricos existirem. Além disso, vivemos em uma era onde a programação é infraestrutura invisível da civilização — bancos, hospitais, comunicação e transporte dependem dela. Entender sua origem é entender como chegamos até aqui.
+                            </p>
+                        </div>
+
+                        <!-- Timeline -->
+                        <div class="timeline-section">
+                            <div class="section-subtitle">Linha do Tempo</div>
+                            <div class="timeline-container">
+                                <!-- Desktop Timeline -->
+                                <div class="timeline-desktop">
+                                    <div class="timeline-line"></div>
+                                    <div class="timeline-items">
+                                        <button class="timeline-dot" data-timeline="0" title="1801 - Tear de Jacquard"></button>
+                                        <button class="timeline-dot" data-timeline="1" title="1822 - Máquina Analítica"></button>
+                                        <button class="timeline-dot" data-timeline="2" title="1843 - Primeiro Algoritmo"></button>
+                                        <button class="timeline-dot" data-timeline="3" title="1947 - Assembly"></button>
+                                        <button class="timeline-dot" data-timeline="4" title="1972 - Linguagem C"></button>
+                                        <button class="timeline-dot" data-timeline="5" title="1995 - JavaScript"></button>
+                                        <button class="timeline-dot" data-timeline="6" title="Hoje - Era Digital"></button>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile Timeline -->
+                                <div class="timeline-mobile">
+                                    <div class="timeline-vertical"></div>
+                                </div>
+
+                                <!-- Timeline Detail Panel -->
+                                <div id="timelineDetail" class="timeline-detail"></div>
+                            </div>
+                            <p class="timeline-hint">Clique em um ponto para ver detalhes</p>
+                        </div>
+
+                        <!-- Sources -->
+                        <div class="sources-section">
+                            <div class="section-subtitle">Fontes</div>
+                            <div class="sources-box">
+                                <div class="source-item">
+                                    <span class="source-marker">›</span>
+                                    <div>
+                                        <div class="source-label">História da Programação</div>
+                                        <a href="https://www.programador.com.br/historia-da-programacao.html" target="_blank" rel="noopener noreferrer" class="source-link">programador.com.br/historia-da-programacao.html</a>
+                                    </div>
+                                </div>
+                                <div class="source-item">
+                                    <span class="source-marker">›</span>
+                                    <div>
+                                        <div class="source-label">IBGE — Internet chega a 74,9 milhões de domicílios do País em 2024</div>
+                                        <a href="https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/44031-internet-chega-a-74-9-milhoes-de-domicilios-do-pais-em-2024" target="_blank" rel="noopener noreferrer" class="source-link">agenciadenoticias.ibge.gov.br</a>
+                                    </div>
+                                </div>
+                                <div class="source-item">
+                                    <span class="source-marker">›</span>
+                                    <div>
+                                        <div class="source-label">História e Evolução do JavaScript — Azion</div>
+                                        <a href="https://www.azion.com/pt-br/learning/jamstack/historia-e-evolucao-do-javascript/" target="_blank" rel="noopener noreferrer" class="source-link">azion.com/pt-br/learning/jamstack</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 1: Os Primórdios -->
+                <div id="tab-topico1" class="tab-content">
+                    <div class="py-10">
+                        <div class="section-subtitle">Tópico 1</div>
+                        <h1 class="section-title">Os Primórdios</h1>
+
+                        <h2 class="subtitle">O Tear de Jacquard (1801)</h2>
+                        <p class="paragraph">
+                            Quando se fala em programação, imagina-se imediatamente telas e teclados — mas o primeiro conceito documentado de programação surgiu em uma fábrica de tecidos. Em 1801, o francês <strong>Joseph-Marie Jacquard</strong> criou uma máquina capaz de substituir o trabalho manual repetitivo na tecelagem: o <em>tear de Jacquard</em>.
+                        </p>
+                        <p class="paragraph">
+                            O segredo estava nos <strong>cartões perfurados</strong>: um furo no cartão equivalia a <code>1</code> (fio passa por cima) e um espaço sem furo equivalia a <code>0</code> (fio passa por baixo). A sequência de cartões programava o padrão do tecido sem intervenção humana a cada passo — um sistema binário antes mesmo de existir a eletricidade.
+                        </p>
+
+                        <div class="highlight-box">
+                            "Cartão furado = 1 | Cartão sem furo = 0" — o código binário do tear de Jacquard, séculos antes dos computadores.
+                        </div>
+
+                        <h2 class="subtitle">Por que Jacquard é o pai da programação?</h2>
+                        <p class="paragraph">
+                            Jacquard criou o primeiro sistema em que uma máquina seguia instruções externas para executar uma tarefa variável. Não era simplesmente um mecanismo automático — era um mecanismo <em>programável</em>. A mesma máquina, com cartões diferentes, produzia padrões completamente diferentes. Esse princípio — separar o programa dos dados e do hardware — é a espinha dorsal de toda a computação moderna.
+                        </p>
+
+                        <div class="info-card curiosity">
+                            <div class="curiosity-label">Curiosidade</div>
+                            <p class="paragraph" style="margin-bottom: 0;">
+                                Os teceleiros de Lyon ficaram tão ameaçados pelo tear de Jacquard que chegaram a destruir máquinas e ameaçar Jacquard de morte. Apesar disso, Napoleão Bonaparte reconheceu o valor da invenção e a popularizou na França.
+                            </p>
+                        </div>
+
+                        <h2 class="subtitle">O Impacto nos Computadores</h2>
+                        <p class="paragraph">
+                            Décadas depois, Charles Babbage se inspirou diretamente nos cartões perfurados de Jacquard para projetar a sua Máquina Analítica — o precursor dos computadores. O mesmo princípio de cartões perfurados foi usado por IBM até os anos 1970. A ideia de Jacquard era tão poderosa que durou mais de 150 anos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Ada & Babbage -->
+                <div id="tab-topico2" class="tab-content">
+                    <div class="py-10">
+                        <div class="section-subtitle">Tópico 2</div>
+                        <h1 class="section-title">Ada Lovelace & Charles Babbage</h1>
+
+                        <h2 class="subtitle">Charles Babbage e a Máquina Analítica (1822)</h2>
+                        <p class="paragraph">
+                            Em 1822, em Londres, o matemático inglês <strong>Charles Babbage</strong> projetou o primeiro computador mecânico: a <em>Máquina Diferencial</em>, construída de madeira e latão, capaz de realizar cálculos de até 50 dígitos. Mais tarde, desenvolveu a ideia para a <em>Máquina Analítica</em>, um projeto muito mais ambicioso que nunca foi completamente construído em vida, mas cujos princípios são notavelmente semelhantes aos dos computadores atuais.
+                        </p>
+                        <p class="paragraph">
+                            A máquina analítica era baseada diretamente nos cartões perfurados do tear de Jacquard para controlar suas operações. Babbage é reconhecido como o <strong>pai do computador</strong>.
+                        </p>
+
+                        <h2 class="subtitle">Ada Lovelace — a Primeira Programadora (1842–1843)</h2>
+                        <p class="paragraph">
+                            <strong>Ada Augusta Byron King</strong>, condessa de Lovelace, foi apresentada à Máquina Analítica de Babbage e ficou fascinada. Entre 1842 e 1843, ao traduzir para o inglês um artigo do matemático italiano Luigi Menabrea sobre a máquina, Ada não apenas traduziu — ela adicionou suas próprias notas, que eram três vezes mais longas que o artigo original.
+                        </p>
+                        <p class="paragraph">
+                            Nessas notas, Ada descreveu um <strong>método para calcular os números de Bernoulli</strong> usando a máquina — considerado o primeiro algoritmo da história projetado para ser executado por uma máquina. Por isso, Ada Lovelace é chamada de a primeira programadora da história.
+                        </p>
+
+                        <div class="highlight-box">
+                            Ada percebeu algo que o próprio Babbage não havia articulado completamente: a máquina poderia manipular <em>qualquer tipo de símbolo</em>, não apenas números. Era um computador de propósito geral.
+                        </div>
+
+                        <div class="info-card curiosity">
+                            <div class="curiosity-label">Legado</div>
+                            <p class="paragraph" style="margin-bottom: 0;">
+                                Em homenagem a Ada Lovelace, o Departamento de Defesa dos Estados Unidos batizou uma de suas linguagens de programação de <strong>Ada</strong>, criada na década de 1980. Seu nome é também celebrado todo segundo terça-feira de outubro, o <em>Ada Lovelace Day</em>, dedicado a mulheres nas ciências e tecnologia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Década de 40 -->
+                <div id="tab-topico3" class="tab-content">
+                    <div class="py-10">
+                        <div class="section-subtitle">Tópico 3</div>
+                        <h1 class="section-title">Década de 40</h1>
+
+                        <h2 class="subtitle">Código de Máquina e Cabos</h2>
+                        <p class="paragraph">
+                            Nos primeiros computadores eletrônicos da década de 1940, programar era literalmente físico: os engenheiros conectavam e desconectavam cabos para inserir instruções. O resultado era código binário puro — <code>0001101010101</code> — onde <code>1</code> significava presença de carga elétrica no cabo e <code>0</code> significava ausência. Era extremamente propenso a erros e demandava horas de trabalho para programas simples.
+                        </p>
+
+                        <h2 class="subtitle">Alan Turing — O Pai da Computação</h2>
+                        <p class="paragraph">
+                            <strong>Alan Turing</strong>, matemático britânico, foi durante a Segunda Guerra Mundial o grande nome por trás da quebra dos códigos nazistas com a máquina Enigma. Mais tarde, Turing formulou os conceitos teóricos da computação: a <em>Máquina de Turing</em>, um modelo abstrato de computador capaz de executar qualquer algoritmo computável.
+                        </p>
+                        <p class="paragraph">
+                            Em meados da década de 1940, Turing trabalhou na ideia de uma <strong>máquina inteligente</strong> — um computador capaz de aprender e computar de forma autônoma. Seus trabalhos teóricos serviram de base para praticamente todos os computadores modernos e para o campo da Inteligência Artificial.
+                        </p>
+
+                        <div class="highlight-box">
+                            "Podemos ver apenas um pequeno trecho do futuro, mas o suficiente para perceber que há muito a fazer." — Alan Turing
+                        </div>
+
+                        <h2 class="subtitle">Assembly — Kathleen Booth (1947)</h2>
+                        <p class="paragraph">
+                            Em 1947, na Inglaterra, a matemática <strong>Kathleen Booth</strong> criou a primeira linguagem Assembly. Assembly traduzia os zeros e uns do código de máquina em palavras-chave mnemônicas (como <code>ADD</code>, <code>MOV</code>, <code>JMP</code>), tornando os programas muito mais legíveis para seres humanos.
+                        </p>
+                        <p class="paragraph">
+                            Embora hoje Assembly seja considerada uma linguagem de baixo nível, na época representou um avanço enorme: programadores podiam finalmente escrever código sem memorizar sequências de bits. Foi o primeiro passo na abstração que continua até as linguagens de alto nível atuais.
+                        </p>
+
+                        <div class="info-card curiosity">
+                            <div class="curiosity-label">Contexto da época</div>
+                            <p class="paragraph" style="margin-bottom: 0;">
+                                À medida que mais problemas precisavam ser solucionados por computadores, tornou-se evidente que era necessário criar linguagens específicas para cada tipo de problema. Isso impulsionou o crescimento exponencial dos paradigmas de programação: estruturado, procedural, orientado a objetos, lógico, funcional — cada um adequado para um tipo diferente de desafio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Linguagem C -->
+                <div id="tab-topico4" class="tab-content">
+                    <div class="py-10">
+                        <div class="section-subtitle">Tópico 4</div>
+                        <h1 class="section-title">Linguagem C</h1>
+
+                        <h2 class="subtitle">Dennis Ritchie e o Nascimento da Linguagem C (1972)</h2>
+                        <p class="paragraph">
+                            Em 1972, nos laboratórios Bell, nos Estados Unidos, o cientista da computação <strong>Dennis Ritchie</strong> criou a linguagem de programação <strong>C</strong>. Desenvolvida originalmente para reescrever o sistema operacional Unix, a linguagem C se tornou um dos marcos mais importantes na história da computação.
+                        </p>
+                        <p class="paragraph">
+                            Antes do C, cada sistema operacional e cada programa importante era escrito em Assembly, específico para um tipo de processador. O C introduziu um nível de abstração que permitia escrever código <em>portável</em> — o mesmo programa podia ser compilado para diferentes tipos de hardware com poucas modificações.
+                        </p>
+
+                        <h2 class="subtitle">A Mãe das Linguagens Modernas</h2>
+                        <p class="paragraph">
+                            A linguagem C é chamada de <strong>"a mãe das linguagens atuais"</strong> porque a maioria das linguagens modernas foi diretamente derivada ou fortemente influenciada por ela. Sua sintaxe, estruturas de controle e modelo de memória moldaram toda uma geração de linguagens.
+                        </p>
+
+                        <div class="languages-grid">
+                            <div class="language-card">
+                                <div class="lang-name">C++</div>
+                                <div class="lang-desc">derivada do C</div>
+                            </div>
+                            <div class="language-card">
+                                <div class="lang-name">C#</div>
+                                <div class="lang-desc">derivada do C</div>
+                            </div>
+                            <div class="language-card">
+                                <div class="lang-name">Java</div>
+                                <div class="lang-desc">derivada do C</div>
+                            </div>
+                            <div class="language-card">
+                                <div class="lang-name">JavaScript</div>
+                                <div class="lang-desc">derivada do C</div>
+                            </div>
+                            <div class="language-card">
+                                <div class="lang-name">PHP</div>
+                                <div class="lang-desc">derivada do C</div>
+                            </div>
+                            <div class="language-card">
+                                <div class="lang-name">Python</div>
+                                <div class="lang-desc">derivada do C</div>
+                            </div>
+                        </div>
+
+                        <h2 class="subtitle">Sistemas que Dependem do C</h2>
+                        <p class="paragraph">
+                            A influência do C vai além das linguagens. Os próprios sistemas operacionais que executam praticamente todo dispositivo do mundo foram escritos majoritariamente em C:
+                        </p>
+
+                        <div class="systems-grid">
+                            <div class="info-card">
+                                <div class="card-title">Linux</div>
+                                <p class="paragraph" style="margin-bottom: 0; font-size: 0.875rem;">Kernel inteiramente em C, base de servidores e Android</p>
+                            </div>
+                            <div class="info-card">
+                                <div class="card-title">Unix</div>
+                                <p class="paragraph" style="margin-bottom: 0; font-size: 0.875rem;">O precursor, reescrito em C por Ritchie e Thompson</p>
+                            </div>
+                            <div class="info-card">
+                                <div class="card-title">Windows</div>
+                                <p class="paragraph" style="margin-bottom: 0; font-size: 0.875rem;">Partes fundamentais do kernel escritas em C/C++</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-box">
+                            Sem a linguagem C, não existiriam os sistemas operacionais modernos — e sem eles, não existiriam os smartphones, a internet como a conhecemos, nem nenhuma das linguagens de alto nível que usamos hoje.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 5: JavaScript & Impacto -->
+                <div id="tab-topico5" class="tab-content">
+                    <div class="py-10">
+                        <div class="section-subtitle">Tópico 5</div>
+                        <h1 class="section-title">JavaScript & Impacto na Sociedade</h1>
+
+                        <h2 class="subtitle">O Nascimento da Web Interativa</h2>
+                        <p class="paragraph">
+                            O primeiro navegador web, <strong>Mosaic</strong>, foi inventado em 1993 e possuía apenas HTML como ferramenta para construir sites — páginas estáticas, sem interação. Em 1996, o CSS foi adicionado para customização visual. Mas ainda faltava algo: a capacidade de responder às ações do usuário em tempo real.
+                        </p>
+                        <p class="paragraph">
+                            A <strong>Netscape</strong>, empresa dona de um dos principais navegadores da época, contratou <strong>Brendan Eich</strong> em 1995 com um objetivo claro: criar uma linguagem que tornasse os sites interativos sem que a página precisasse ser recarregada. A missão era competir com o Internet Explorer da Microsoft.
+                        </p>
+
+                        <h2 class="subtitle">JavaScript — A Linguagem Mais Usada do Mundo</h2>
+                        <p class="paragraph">
+                            Brendan Eich criou o <strong>JavaScript</strong> em apenas dez dias. Inicialmente chamada de Mocha, depois LiveScript, e finalmente JavaScript — o nome foi escolhido estrategicamente para aproveitar a popularidade do Java da Sun Microsystems, embora as duas linguagens não tenham relação técnica significativa.
+                        </p>
+                        <p class="paragraph">
+                            Hoje, JavaScript é a linguagem de programação mais utilizada pelos programadores no mundo, presente em praticamente todos os websites, servidores (Node.js), aplicativos móveis e, cada vez mais, em inteligência artificial e computação de borda.
+                        </p>
+
+                        <div class="highlight-box">
+                            "JavaScript foi feito em dez dias — e carregamos esse peso desde então." — brincadeira recorrente entre desenvolvedores, mas que esconde um grande respeito pela linguagem que alimenta toda a web.
+                        </div>
+
+                        <h2 class="subtitle">Impacto na Sociedade</h2>
+                        <p class="paragraph">
+                            Com a popularização da internet e das linguagens como JavaScript, a programação se tornou a infraestrutura invisível da civilização. Sistemas bancários, prontuários médicos, controle de tráfego aéreo, comunicação e logística global — tudo depende diretamente de código. Sem programação, a sociedade moderna entraria em colapso.
+                        </p>
+
+                        <div class="impact-grid">
+                            <div class="info-card">
+                                <div class="card-title">Redes Sociais</div>
+                                <p class="paragraph">
+                                    Criadas com base em JavaScript e outras linguagens modernas, as redes sociais são hoje o meio mais rápido de comunicação. Em 2024, o IBGE registrou que a internet chegou a <strong>74,9 milhões de domicílios</strong> no Brasil — 90% do total.
+                                </p>
+                            </div>
+                            <div class="info-card">
+                                <div class="card-title">Saúde Mental</div>
+                                <p class="paragraph">
+                                    O uso excessivo de redes sociais apresenta impacto negativo na saúde mental, especialmente em crianças. Pesquisas apontam que o uso excessivo pode comprometer habilidades cognitivas e criar dependência de validação social digital.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 class="subtitle">Curiosidades</h2>
+                        <div class="curiosities">
+                            <div class="info-card curiosity">
+                                <div class="curiosity-label">Lua — Made in Brazil</div>
+                                <p class="paragraph" style="margin-bottom: 0;">
+                                    Criada em 1993 na PUC-Rio, <strong>Lua</strong> é uma linguagem de programação desenvolvida no Brasil e usada mundialmente em jogos, sistemas embarcados e scripts. É um orgulho nacional na computação global.
+                                </p>
+                            </div>
+                            <div class="quote-box">
+                                <p class="quote">"Não é a linguagem de programação que define o programador, mas sim sua lógica."</p>
+                                <p class="quote-author">— David Ribeiro Guilherme</p>
+                            </div>
+                            <div class="quote-box">
+                                <p class="quote">"Faça como um programador. Quando tudo está errado e confuso, apague tudo e recomece do zero."</p>
+                                <p class="quote-author">— Orlando Cordeiro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Quiz -->
+                <div id="tab-quiz" class="tab-content">
+                    <div class="py-10">
+                        <div class="section-subtitle">Quiz</div>
+                        <h1 class="section-title">Teste seus Conhecimentos</h1>
+
+                        <div id="quizResult" class="quiz-result hidden"></div>
+
+                        <form id="quizForm" class="quiz-form">
+                            <!-- Questions will be generated by JavaScript -->
+                        </form>
+
+                        <div class="quiz-controls">
+                            <button type="submit" form="quizForm" id="submitBtn" class="submit-btn" disabled>
+                                Enviar Respostas
+                            </button>
+                            <span id="answeredCount" class="answered-count"></span>
+                        </div>
+
+                        <button id="resetBtn" class="reset-btn hidden">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+                                <path d="M21 3v5h-5"></path>
+                                <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+                                <path d="M3 21v-5h5"></path>
+                            </svg>
+                            Tentar novamente
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Desktop Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title">Menu</div>
+                <div class="sidebar-divider"></div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <button class="sidebar-link" data-tab="inicio">
+                    <span class="sidebar-indicator"></span>
+                    Início
+                </button>
+                <button class="sidebar-link" data-tab="topico1">
+                    <span class="sidebar-indicator"></span>
+                    Os Primórdios
+                </button>
+                <button class="sidebar-link" data-tab="topico2">
+                    <span class="sidebar-indicator"></span>
+                    Ada & Babbage
+                </button>
+                <button class="sidebar-link" data-tab="topico3">
+                    <span class="sidebar-indicator"></span>
+                    Década de 40
+                </button>
+                <button class="sidebar-link" data-tab="topico4">
+                    <span class="sidebar-indicator"></span>
+                    Linguagem C
+                </button>
+                <button class="sidebar-link" data-tab="topico5">
+                    <span class="sidebar-indicator"></span>
+                    JavaScript & Impacto
+                </button>
+                <button class="sidebar-link" data-tab="quiz">
+                    <span class="sidebar-indicator"></span>
+                    Quiz
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-decoration"></div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
