@@ -766,6 +766,7 @@ a:hover {
     cursor: pointer;
     padding: 0;
     transition: all 0.2s;
+    color: var(--chart-1);
 }
 
 .timeline-dot span{
