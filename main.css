@@ -753,6 +753,7 @@ a:hover {
     gap: 0.25rem;
     position: relative;
     z-index: 10;
+    border: none;
 }
 
 .timeline-dot {
@@ -807,6 +808,7 @@ a:hover {
     display: block;
     position: relative;
     background: var(--background);
+    border: none;
 }
 
 @media (min-width: 768px) {
@@ -864,6 +866,7 @@ a:hover {
     width: 1px;
     bottom: -1.5rem;
     background-color: var(--color-border);
+    border: none;
 }
 
 .timeline-detail {
