@@ -753,6 +753,7 @@ a:hover {
     gap: 0.25rem;
     position: relative;
     z-index: 10;
+    border: none;
 }
 
 .timeline-dot {
@@ -816,9 +817,6 @@ a:hover {
 }
 
 .timeline-vertical {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
     background: var(--background);
 }
 
